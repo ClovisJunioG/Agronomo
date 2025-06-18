@@ -72,28 +72,47 @@ header::after {
 }
 
 
-    /* Botão Dark Mode */
-    #darkModeToggle {
-      position: absolute;
-      top: 1.2rem;
-      right: 1rem;
-      background-color: #4caf50;
-      border: none;
-      color: white;
-      padding: 0.5rem 0.9rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background-color 0.3s ease;
-      user-select: none;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
-    #darkModeToggle:hover,
-    #darkModeToggle:focus {
-      background-color: #357a38;
-      outline: none;
-    }
+#darkModeToggle {
+  background-color: #2e7d32;
+  color: #f1f8e9;
+  border: 2px solid #81c784;
+  padding: 0.5rem 1.2rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover,
+#darkModeToggle:focus {
+  background-color: #1b5e20;
+  color: #ffffff;
+  border-color: #81c784;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+body.dark #darkModeToggle {
+  background-color: #144214;
+  color: #d6e8d6;
+  border: 2px solid #3a6b3a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+
+body.dark #darkModeToggle:hover,
+body.dark #darkModeToggle:focus {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border-color: #81c784;
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
 
     nav {
       background-color: #2e7d32;
@@ -431,16 +450,16 @@ header p {
   <header>
     <h1>Clovis Junio</h1>
     <p>Futuro Engenheiro Agrônomo | Universidade Federal de Goiás</p>
-    <button id="darkModeToggle" aria-label="Alternar modo escuro">Dark Mode</button>
+   
   </header>
 
   <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#atuacao">Áreas de Interesse</a>
-    <a href="#contato">Contato</a>
-    <a href="#curriculo">Currículo</a>
-  </nav>
-
+  <a href="#sobre">Sobre</a>
+  <a href="#atuacao">Áreas de Interesse</a>
+  <a href="#contato">Contato</a>
+  <a href="#curriculo">Currículo</a>
+  <button id="darkModeToggle" aria-label="Alternar modo escuro">Dark Mode</button>
+</nav>
   <section id="sobre">
     <h2>Sobre Mim</h2>
     <p>
